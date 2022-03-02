@@ -6,5 +6,8 @@
  * @returns {String} The file extension (with no period), or false if there is none.
  */
 export default function getFileExtension(filename) {
-
+   const fileStr = filename.split('.').pop();
+   if(fileStr === filename) return false;
+   
+   return fileStr;
 }
