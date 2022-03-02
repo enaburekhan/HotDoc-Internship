@@ -6,5 +6,13 @@
  * @returns {Number} The sum of all integers contained in the input, at any level.
  */
 export default function arraySum(startOfTree) {
-
+ //   O(n) time | O(1) space  
+ const flattenedArray = startOfTree.flat(Infinity) 
+ let sum = 0;
+ for(let i = 0; i < flattenedArray.length; i++){
+     if(Number.isInteger(flattenedArray[i])){
+         sum += flattenedArray[i]
+     }
+ }
+  return sum  
 }
